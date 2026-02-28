@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== FONT FACES ===== */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans-Variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* === TechTalent Brand Palette - Dark Navy / Slate / Electric Blue === */
+    /* Background: near-white slate */
+    --background: 0.975 0.006 240;
+    /* Foreground: dark navy */
+    --foreground: 0.18 0.04 250;
+
+    /* Card: white */
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 250;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 250;
+
+    /* Primary: deep navy */
+    --primary: 0.22 0.055 256;
+    --primary-foreground: 0.98 0.004 240;
+
+    /* Secondary: mid slate */
+    --secondary: 0.92 0.016 245;
+    --secondary-foreground: 0.25 0.05 256;
+
+    /* Muted: light slate */
+    --muted: 0.93 0.012 243;
+    --muted-foreground: 0.5 0.03 250;
+
+    /* Accent: electric blue */
+    --accent: 0.58 0.22 258;
+    --accent-foreground: 1 0 0;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border */
+    --border: 0.88 0.016 245;
+    --input: 0.88 0.016 245;
+    --ring: 0.58 0.22 258;
+
+    /* Chart */
+    --chart-1: 0.58 0.22 258;
+    --chart-2: 0.62 0.18 220;
+    --chart-3: 0.50 0.16 280;
+    --chart-4: 0.65 0.14 200;
+    --chart-5: 0.70 0.12 195;
+
+    /* Sidebar */
+    --sidebar: 0.185 0.04 255;
+    --sidebar-foreground: 0.95 0.008 245;
+    --sidebar-primary: 0.58 0.22 258;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.25 0.05 256;
+    --sidebar-accent-foreground: 0.95 0.008 245;
+    --sidebar-border: 0.28 0.05 256;
+    --sidebar-ring: 0.58 0.22 258;
+
+    /* Brand custom tokens */
+    --navy: 0.185 0.054 256;
+    --navy-dark: 0.13 0.042 255;
+    --electric: 0.62 0.22 258;
+    --electric-light: 0.72 0.16 250;
+    --teal: 0.65 0.16 205;
+  }
+
+  .dark {
+    --background: 0.13 0.04 255;
+    --foreground: 0.95 0.008 245;
+    --card: 0.18 0.04 256;
+    --card-foreground: 0.95 0.008 245;
+    --popover: 0.20 0.042 256;
+    --popover-foreground: 0.95 0.008 245;
+    --primary: 0.62 0.22 258;
+    --primary-foreground: 0.13 0.04 255;
+    --secondary: 0.25 0.05 256;
+    --secondary-foreground: 0.95 0.008 245;
+    --muted: 0.22 0.045 255;
+    --muted-foreground: 0.65 0.025 250;
+    --accent: 0.58 0.22 258;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.205 0 0;
+    --border: 0.28 0.048 256;
+    --input: 0.28 0.048 256;
+    --ring: 0.62 0.22 258;
+    --chart-1: 0.62 0.22 258;
+    --chart-2: 0.65 0.18 220;
+    --chart-3: 0.55 0.18 280;
+    --chart-4: 0.68 0.14 200;
+    --chart-5: 0.72 0.12 195;
+    --sidebar: 0.15 0.038 255;
+    --sidebar-foreground: 0.95 0.008 245;
+    --sidebar-primary: 0.62 0.22 258;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.22 0.045 255;
+    --sidebar-accent-foreground: 0.95 0.008 245;
+    --sidebar-border: 0.28 0.048 256;
+    --sidebar-ring: 0.62 0.22 258;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", "Cabinet Grotesk", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Bricolage Grotesque", "Cabinet Grotesk", system-ui, sans-serif;
+  }
+
+  .font-body {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--electric)) 0%,
+      oklch(var(--teal)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-navy {
+    background-color: oklch(var(--navy));
+  }
+
+  .bg-navy-dark {
+    background-color: oklch(var(--navy-dark));
+  }
+
+  .text-electric {
+    color: oklch(var(--electric));
+  }
+
+  .border-electric {
+    border-color: oklch(var(--electric));
+  }
+
+  .section-padding {
+    @apply py-20 px-4 md:px-8;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--navy-dark) / 0.88) 0%,
+      oklch(0.185 0.054 256 / 0.75) 50%,
+      oklch(0.22 0.06 240 / 0.65) 100%
+    );
+  }
+}

@@ -41,7 +41,7 @@ export default function AboutSection() {
             transition={{ duration: 0.7 }}
           >
             <span className="inline-block px-3 py-1 rounded-full bg-electric/20 text-electric-light text-sm font-semibold tracking-wide uppercase mb-6">
-              About TechTalent
+              About DTekMicro
             </span>
             <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
               Built by Technologists,{" "}
@@ -50,7 +50,7 @@ export default function AboutSection() {
             <div className="space-y-4 text-white/65 leading-relaxed">
               <p>
                 Founded in 2012 by a team of engineering leaders and HR
-                professionals, TechTalent was born from frustration with
+                professionals, DTekMicro was born from frustration with
                 traditional recruiting — slow, generic, and disconnected from
                 how technology teams actually work.
               </p>

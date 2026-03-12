@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle, Clock, Loader2, Mail, MapPin, Phone } from "lucide-react";
+import { CheckCircle, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -12,22 +12,17 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Headquarters",
-    value: "350 Fifth Avenue, Suite 4200\nNew York, NY 10118",
+    value: "Pune, Maharashtra\nIndia",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (212) 555-0178",
+    value: "+91 8757310780",
   },
   {
     icon: Mail,
     label: "Email",
     value: "hello@techtalent.io",
-  },
-  {
-    icon: Clock,
-    label: "Business Hours",
-    value: "Monday – Friday\n8:00 AM – 6:00 PM EST",
   },
 ];
 
